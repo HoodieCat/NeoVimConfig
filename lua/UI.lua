@@ -1,7 +1,7 @@
 return {
     {
         "akinsho/bufferline.nvim",
-        event = "veryLazy",
+        event = "VeryLazy",
         config = true,
     },
     {
