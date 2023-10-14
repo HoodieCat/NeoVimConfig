@@ -35,5 +35,15 @@ map('n', '<leader>r', ':so %<CR>')
 map('n', '<C-t>', ':NvimTreeToggle<CR>')
 map('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
+<<<<<<< HEAD
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')
+=======
+--vim.sneak
+map('n', 'f', '<Plug>Sneak_f')
+map('n', 'F', '<Plug>Sneak_F')
+map('n', 't', '<Plug>Sneak_t')
+map('n', 'T', '<Plug>Sneak_T')
+
+--vim.flash
+>>>>>>> 6fb349743b0ae0b587c7e03753e884c620f11a7a

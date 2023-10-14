@@ -50,6 +50,9 @@ lazy.setup({
         dependencies = { 
             "nvim-tree/nvim-web-devicons"
         },
+        config = function()
+            require("alpha").setup(require("alpha.themes.dashboard").config)
+        end
     },
     --File explorer
     {
@@ -87,6 +90,18 @@ lazy.setup({
         "iamcco/markdown-preview.nvim",
         ft = { md, },
     },
+        build = function()
+            -- install when update or init
+           vim.fn["mkdp#util#install"]()
+        end,
+        ft = { md, },
+    },
+    --treesitter
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+    },
+    --UI interface
     require("UI"),
 })
 
