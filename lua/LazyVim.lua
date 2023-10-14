@@ -88,19 +88,38 @@ lazy.setup({
     -- Markdown Preview
     {
         "iamcco/markdown-preview.nvim",
-        ft = { md, },
-        build = function()
-            -- install when update or init
-           vim.fn["mkdp#util#install"]()
+        cmd = {"MarkdownPreviewToggle", "MarkdownPreview","MarkdownPreviewStop"},
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = {"markdown"}
         end,
-        ft = { md, },
+        ft = { "markdown", },
     },
     --treesitter
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
+        config = function()
+            require("nvim-treesitter.configs").setup
+			{
+				ensure_installed = {'bash', 'c', 'cpp', 'css', 'html', 'javascript', 'json', 'lua', 'python',
+			    'rust', 'typescript', 'vim', 'yaml',
+                },
+				sync_install = false,
+				auto_install = true,
+				highlight = {
+					enable = true,
+				},
+			}
+		 end
     },
+    {
+        "lilydjwg/fcitx.vim",
+    },
+    --LSP
+    --cmp
+    --dap
     --UI interface
     require("UI"),
-})
 
+})

@@ -1,12 +1,19 @@
 return {
     {
-        "akinsho/bufferline.nvim",
-        event = "VeryLazy",
-        config = true,
+        -- temp unaccessible
+        -- "akinsho/bufferline.nvim",
+        -- version = "*",
+        -- dependencies = "nvim-tree/nvim-web-devicons",
+        -- config = function()
+        --     require("bufferline").setup({})
+        -- end,
     },
     {
         "lukas-reineke/indent-blankline.nvim",
         event = "VeryLazy",
-        main = "ibl"
+        main = "ibl",
+        config = function()
+            require("ibl").setup() 
+        end,
     },
 }
