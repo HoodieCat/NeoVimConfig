@@ -89,7 +89,6 @@ lazy.setup({
     {
         "iamcco/markdown-preview.nvim",
         ft = { md, },
-    },
         build = function()
             -- install when update or init
            vim.fn["mkdp#util#install"]()
