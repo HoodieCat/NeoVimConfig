@@ -45,3 +45,4 @@ map('n', 'T', '<Plug>Sneak_T')
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
 --vim.flash
+--

@@ -24,16 +24,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end,
 })
--- vim.api.nvim_create_autocmd("BufReadPost", {
---     callback = function()
---         if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
---             vim.cmd("norm! g`\"")
---             -- vim.fn.setpos(".", vim.fn.getpos("'\""))
---             vim.cmd("silent! foldopen")
---         end
---     end,
--- })
-
 -- autosave the edited content
 -- if options.auto_save then
 

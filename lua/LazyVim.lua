@@ -19,6 +19,8 @@ end
 
 -- Start Setup
 lazy.setup({
+    --UI interface
+    require("UI"),
     --colorsheme，tabline:
     {
         "folke/tokyonight.nvim",
@@ -89,11 +91,8 @@ lazy.setup({
     {
         "iamcco/markdown-preview.nvim",
         cmd = {"MarkdownPreviewToggle", "MarkdownPreview","MarkdownPreviewStop"},
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = {"markdown"}
-        end,
         ft = { "markdown", },
+        build = function() vim.fn["mkdp#util#install"]() end,
     },
     --treesitter
     {
@@ -111,15 +110,11 @@ lazy.setup({
 					enable = true,
 				},
 			}
-		 end
+		 end,
     },
     {
         "lilydjwg/fcitx.vim",
     },
-    --LSP
-    --cmp
-    --dap
-    --UI interface
-    require("UI"),
-
+    -- lsp server
+    -- require(lsp),
 })
