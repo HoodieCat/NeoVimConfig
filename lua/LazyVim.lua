@@ -117,11 +117,6 @@ lazy.setup({
     {
         "lilydjwg/fcitx.vim",
     },
-    --LSP
-    --cmp
-    --dap
-    --UI interface
-    require("UI"),
 
     -- telescope
     {
@@ -164,5 +159,10 @@ lazy.setup({
             },
     }
 		end
-}
+    },
+   --LSP
+    --cmp
+    --dap
+    --UI interface
+    require("UI"),
 })
