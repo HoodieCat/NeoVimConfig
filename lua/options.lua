@@ -49,7 +49,6 @@ o.splitbelow = true
 o.linebreak = true
 o.termguicolors = true
 o.laststatus = 3
-
 o.hidden = true o.history = 100
 o.lazyredraw = true
 o.updatetime = 250

@@ -44,5 +44,11 @@ map('n', 'T', '<Plug>Sneak_T')
 --deal with wrap
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
+
+-- map('n','<leader>fi','<cmd>lua require('telescope.builtin').find_files()<cr>')
 --vim.flash
 --
+<<<<<<< HEAD
+=======
+--
+>>>>>>> 458fb8abe418d58a5ead99012fe3c1b6f32f5ff5
