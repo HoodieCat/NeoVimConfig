@@ -53,7 +53,7 @@ o.hidden = true o.history = 100
 o.lazyredraw = true
 o.updatetime = 250
 o.shiftround = true
-
+o.wrap = true
 --disable some unnecessary plugin
 local disabled_built_ins = {
    "2html_plugin",

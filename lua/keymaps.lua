@@ -16,9 +16,9 @@ map('n', '<leader>l', ':<C-u>nohls<CR>')
 map('n', '[b' ,':bprevious<CR>')
 map('n', ']b' ,':bn<CR>')
 
-map('n', '<leader>q', ':q<CR>')
-map('n', '<leader>qq', ':qa!<CR>')
-map('n', '<leader>w', ':w<CR>')
+map('n', '<leader>q', '<cmd>q<CR>')
+map('n', '<leader>w', '<cmd>w<CR>')
+map('n', '<leader>qq', '<cmd>wq<CR>')
 map('n', '<leader>c', '<C-w><C-c>')
 map('n', '<F3>', ':se paste!<CR>')
 
@@ -31,15 +31,7 @@ map('n', '<C-l>', '<C-w>l')
 --resorce current config
 map('n', '<leader>r', ':so %<CR>')
 
--- NvimTree
-map('n', '<C-t>', ':NvimTreeToggle<CR>')
-map('n', '<C-f>', ':NvimTreeFindFile<CR>')
-
 --vim.sneak
-map('n', 'f', '<Plug>Sneak_f')
-map('n', 'F', '<Plug>Sneak_F')
-map('n', 't', '<Plug>Sneak_t')
-map('n', 'T', '<Plug>Sneak_T')
 
 --deal with wrap
 map('n', 'j', 'gj')
@@ -47,8 +39,10 @@ map('n', 'k', 'gk')
 
 -- map('n','<leader>fi','<cmd>lua require('telescope.builtin').find_files()<cr>')
 --vim.flash
---
-<<<<<<< HEAD
-=======
---
->>>>>>> 458fb8abe418d58a5ead99012fe3c1b6f32f5ff5
+
+--diagnose jump
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+vim.keymap.set('n', '<leader>df', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+

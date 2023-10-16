@@ -16,7 +16,7 @@ autocmd('BufEnter',{
 })
 
 --back to the place last time leave
-vim.api.nvim_create_autocmd("BufReadPost", {
+autocmd("BufReadPost", {
     callback = function()
         if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
                 vim.cmd("norm! g`\"")
@@ -24,6 +24,11 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end,
 })
--- autosave the edited content
--- if options.auto_save then
-
+-- close nerdtree when only nerdtree left
+autogroup("NerdTreeClose", {clear = true})
+autocmd("BufEnter", {
+    group = "NerdTreeClose",
+    callback = function()
+        vim.cmd([[ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif]]) 
+    end
+})
