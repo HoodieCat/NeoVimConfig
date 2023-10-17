@@ -25,7 +25,13 @@ lazy.setup({
     "wellle/targets.vim",
     "vim-scripts/ReplaceWithRegister",
     --motions
-    require("flash"),
+    {
+        "ggandor/leap.nvim",
+        config = function()
+            require('leap').add_default_mappings()
+        end
+    },
+    require("Git"),
     --UI interface /dashboard/statusline/file explore
     require("UI"),
     -- Markdown Preview
@@ -36,6 +42,20 @@ lazy.setup({
     -- telescope
     require("telescope"),
     --LSP
+    require("lsp"),
     --cmp
+    {
+        -- AutoCompletion
+        "hrsh7th/nvim-cmp",
+        dependencies = {
+            -- snippet engine & its aasociated nvim-cmp source
+            "l3MON4D3/LuaSnip",
+            "saadparwaiz1/cmp_luasnip",
+            -- adds lsp completion capabilities
+            "hrsh7th/cmp-nvim-lsp",
+            -- adds a number of user-friednly snippets
+            "rafamadriz/friendly-snippets",
+        },
+    },
     --dap
 })

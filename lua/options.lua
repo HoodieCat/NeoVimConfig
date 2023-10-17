@@ -21,7 +21,7 @@ o.scrolloff = 5
 o.wildmode = "full"
 
 -- extra file generate
-o.undofile = false
+o.undofile = true
 o.swapfile = false
 o.backup = false
 
@@ -41,7 +41,7 @@ o.expandtab = true
 
 o.mouse = 'a'
 o.clipboard = 'unnamedplus'
-o.completeopt = 'menu,noinsert,noselect'
+o.completeopt = 'menuone,noselect'
 o.showmatch = true
 o.foldmethod = 'marker'
 o.splitright = true
@@ -52,7 +52,6 @@ o.laststatus = 3
 o.hidden = true o.history = 100
 o.lazyredraw = true
 o.updatetime = 250
-o.shiftround = true
 o.wrap = true
 
 --disable some unnecessary plugin

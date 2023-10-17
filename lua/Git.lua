@@ -1,0 +1,19 @@
+-- Git 
+return 
+{
+    {
+        "tpope/vim-fugitive",
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        opts ={
+            signs = {
+                    add = { text = "+"},
+                    change = { text = "~"},
+                    delete = { text = "_" },
+                    topdelete = { text = "‾"},
+                    changedelte = { text = "~"},
+                },
+            },
+},
+}

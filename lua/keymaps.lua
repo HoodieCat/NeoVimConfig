@@ -31,6 +31,7 @@ map('n', '<C-l>', '<C-w>l')
 --resorce current config
 map('n', '<leader>r', ':so %<CR>')
 
+vim.keymap.set({'n','v'}, '<Space>', '<Nop>')
 --deal with wrap
 map('n', 'j', 'gj')
 map('n', 'k', 'gk')
@@ -44,3 +45,6 @@ vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, { desc = 'Open diag
 --nvim-tree 
 map('n', '<C-t>','<cmd>NvimTreeToggle<CR>')
 map('n', '<C-f>','<cmd>NvimTreeFindFile<CR>')
+
+--markdown_preview
+map('n', '<C-p>', '<cmd>MarkdownPreviewToggle<CR>')
