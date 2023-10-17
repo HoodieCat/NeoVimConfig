@@ -19,31 +19,23 @@ end
 
 -- Start Setup
 lazy.setup({
-    -- edit tool
-    {
-        "tpope/vim-surround",
-        "tpope/vim-repeat",
-        "tpope/vim-commentary",
-        "wellle/targets.vim",
-        "vim-scripts/ReplaceWithRegister",
-    },
-    --UI interface 
+    "tpope/vim-surround",
+    "tpope/vim-repeat",
+    "tpope/vim-commentary",
+    "wellle/targets.vim",
+    "vim-scripts/ReplaceWithRegister",
+    --motions
+    require("flash"),
+    --UI interface /dashboard/statusline/file explore
     require("UI"),
-    --File explorer
-    require("NerdTree"),
     -- Markdown Preview
-    require("Markdown-Preview");
+    require("Markdown-Preview"),
     --treesitter
-	require("treesitter"),
-    {
-        "lilydjwg/fcitx.vim",
-    },
-
+    require("treesitter"),
+    "lilydjwg/fcitx.vim",
     -- telescope
     require("telescope"),
-   --LSP
+    --LSP
     --cmp
     --dap
-    --UI interface
-    require("UI"),
 })
