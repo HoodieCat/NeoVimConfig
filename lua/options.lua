@@ -81,7 +81,7 @@ local disabled_built_ins = {
    "compiler",
    "bugreport",
    "ftplugin",
-}  
-for _, plugin in pairs(disabled_built_ins) do 
+}
+for _, plugin in pairs(disabled_built_ins) do
     global["loaded_" .. plugin] = 1
 end

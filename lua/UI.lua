@@ -5,7 +5,6 @@ return {
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },
-        lazy = false, -- colorscheme load as neovim launch
         priority = 1000, -- high priority for colorscheme
         config = function() 
             -- change colorscheme when load tokyonight
@@ -56,7 +55,6 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
-        lazy = false,
         dependencies = {
             "nvim-tree/nvim-web-devicons",
         },

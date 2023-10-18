@@ -48,3 +48,6 @@ map('n', '<C-f>','<cmd>NvimTreeFindFile<CR>')
 
 --markdown_preview
 map('n', '<C-p>', '<cmd>MarkdownPreviewToggle<CR>')
+
+--persistence.nvim working directory status persistence
+vim.api.nvim_set_keymap("n", "<leader>sl", [[<cmd>lua require("persistence").load({last=true})<CR>]],{ desc= "[l]oad [s]tatus"})

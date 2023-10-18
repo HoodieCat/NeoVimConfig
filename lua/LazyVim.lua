@@ -22,8 +22,15 @@ lazy.setup({
     "tpope/vim-surround",
     "tpope/vim-repeat",
     "tpope/vim-commentary",
-    "wellle/targets.vim",
+    -- "wellle/targets.vim",
     "vim-scripts/ReplaceWithRegister",
+    --persistence 
+    {
+        "folke/persistence.nvim",
+        event = "BufReadPre",
+        opts = {},
+    },
+
     --motions
     {
         "ggandor/leap.nvim",
