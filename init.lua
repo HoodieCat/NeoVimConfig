@@ -6,6 +6,6 @@ require("options")
 require("keymaps")
 require("LazyVim")
 require("autocmd")
-require("lsp_func")
+require("PlugConfig")
 -- End
 
