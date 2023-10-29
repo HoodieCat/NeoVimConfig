@@ -9,7 +9,7 @@ return{
 			'rust', 'typescript', 'vim', 'yaml' },
 		auto_install = false,
 		highlight = { enable = true },
-        indent = { enable = true },
+		indent = { enable = true },
         }
     end,
 }

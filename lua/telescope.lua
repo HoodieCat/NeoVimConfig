@@ -10,16 +10,17 @@ return{
     },
     keys = {
         -- set telescope keymap until press the keys
+        -- old files
          { "<leader>od", "<cmd>lua require('telescope.builtin').oldfiles()<cr>"},
+        -- buffers 
          { "<leader>bf", "<cmd>lua require('telescope.builtin').buffers({ sort_mru = true })<cr>" },
          { "<leader>cb", function()
              require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown{
-                 winblend = 10,
+                 winblend = 30,
                  previewer = true,
              })
          end
          },
-        { "<leader>fi", function() require('telescope.builtin').find_files() end},
         { "<leader>fi", function() require('telescope.builtin').find_files() end},
         { "<leader>rg", function() require('telescope.builtin').live_grep() end},
         { "<leader>ft", function() require('telescope.builtin').help_tags() end},

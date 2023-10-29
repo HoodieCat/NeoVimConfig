@@ -19,9 +19,11 @@ end
 
 -- Start Setup
 lazy.setup({
+    -- edit tools
     "tpope/vim-surround",
     "tpope/vim-repeat",
     "tpope/vim-commentary",
+    "tpope/vim-sleuth",
     "wellle/targets.vim",
     "vim-scripts/ReplaceWithRegister",
     --persistence 
@@ -44,24 +46,13 @@ lazy.setup({
     require("Markdown-Preview"),
     --treesitter
     require("treesitter"),
+    --input method switch
     "lilydjwg/fcitx.vim",
     -- telescope
     require("telescope"),
     --LSP
     require("lsp"),
-    --cmp
-    {
-        -- AutoCompletion
-        "hrsh7th/nvim-cmp",
-        dependencies = {
-            -- snippet engine & its aasociated nvim-cmp source
-            "l3MON4D3/LuaSnip",
-            "saadparwaiz1/cmp_luasnip",
-            -- adds lsp completion capabilities
-            "hrsh7th/cmp-nvim-lsp",
-            -- adds a number of user-friednly snippets
-            "rafamadriz/friendly-snippets",
-        },
-    },
+    ----cmp
+    require("cmp"),
     --dap
 })

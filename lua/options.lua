@@ -9,7 +9,6 @@ o.cursorline = true
 o.number = true
 o.relativenumber = true
 
--- font
 o.showmode = false
 
 -- case 
