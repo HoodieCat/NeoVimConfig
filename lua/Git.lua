@@ -13,6 +13,7 @@ return
                     delete = { text = "_" },
                     topdelete = { text = "‾"},
                     changedelte = { text = "~"},
+                    untracked    = { text = '┆' },
                 },
             },
         },

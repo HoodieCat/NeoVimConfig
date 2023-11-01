@@ -9,7 +9,6 @@ local on_attach = function(_, bufnr)
 
   nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
-
   nmap('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
@@ -43,7 +42,12 @@ require('mason-lspconfig').setup()
 local servers = {
   clangd = {},
   pyright = {},
-  -- lua_ls = {},
+  lua_ls = {
+    Lua = {
+      workspace = { checkThirdParty = false },
+      telemetry = { enable = false },
+    },
+  },
   rust_analyzer = {},
   marksman = {},
   jsonls = {},
@@ -75,11 +79,11 @@ mason_lspconfig.setup_handlers {
 }
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
-local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
+local cmp = require 'cmp'
 cmp.setup {
   snippet = {
     expand = function(args)

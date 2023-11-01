@@ -15,6 +15,9 @@ map('n', '<leader>l', ':<C-u>nohls<CR>')
 --buffer jump
 map('n', '[b' ,':bprevious<CR>')
 map('n', ']b' ,':bn<CR>')
+--tab jump
+map('n', '[t' ,':tabNext<CR>')
+map('n', ']t' ,':tabprevious<CR>')
 
 map('n', '<leader>q', '<cmd>q<CR>')
 map('n', '<leader>w', '<cmd>w<CR>')
